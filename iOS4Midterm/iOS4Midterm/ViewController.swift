@@ -49,6 +49,9 @@ class ViewController: UIViewController {
             currentNumber = topDisplayLabel.text!
             plusButtonActive = true
         } else {
+            if currentNumber.hasPrefix("-") {
+                currentNumber.removeAtIndex(currentNumber.startIndex)
+            }
             topDisplayLabel.text = "\(currentNumber)"
             currentNumber = topDisplayLabel.text!
             plusButtonActive = false
